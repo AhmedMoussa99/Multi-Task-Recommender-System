@@ -1,4 +1,4 @@
-**Recommender System: Multi-Task Learning for Recommendation**
+# Recommender System: Multi-Task Learning for Recommendation
 
 ## General Requirements
 
