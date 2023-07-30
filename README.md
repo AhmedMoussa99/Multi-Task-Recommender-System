@@ -1,6 +1,5 @@
 # Recommender System: Entire Space Multi-Task Model (ESMM)
 
-## Four A’s Data Dudes
 
 ### Motivation and Problem Statement
 
