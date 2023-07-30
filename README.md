@@ -1,60 +1,90 @@
-# Recommender System: Entire Space Multi-Task Model (ESMM)
+**Recommender System: Multi-Task Learning for Recommendation**
+
+## General Requirements
+
+Welcome to our project on "Multi-Task Learning for Recommendation." In this group-based project, we aim to explore and implement multi-task learning techniques for recommendation systems using the Tenrec dataset. Each team member will be responsible for working on one model or pipeline, ensuring that we collectively benefit from the task. This project proposal outlines our approach to achieve the following goals:
+
+1. Familiarize ourselves with experiment design and dataset preparation for deep-learning tasks.
+2. Understand state-of-the-art models for recommendation tasks.
+3. Replicate SOTA models and apply them to new datasets.
+4. Compare and conclude on the performance of SOTA models.
+5. Collaborate with each other to enhance our knowledge on the specific task.
+6. Present our findings through a recorded presentation and a replicate package for all experiments.
+7. Create a neat replication package in a notebook file (ipynb) for final evaluation.
+
+In the following sections, we will detail our motivation, problem statement, related work, data exploration, experiment design, and work distribution.
+
+## Motivation and Problem Statement
+
+**Problem Statement:**  
+Our objective is to develop a multi-task learning model that can simultaneously perform multiple recommendation tasks, including item recommendation and click-through rate (CTR) prediction, using the Tenrec dataset. We want to improve recommendation accuracy and CTR prediction compared to single-task models. The success of our project will be measured through appropriate evaluation metrics for recommendation accuracy and CTR prediction.
+
+**Motivation and Background:**  
+Recommender systems are crucial for online platforms, helping users discover relevant content and enhancing their experience. Multi-task learning has emerged as a promising approach for recommendation systems. By jointly learning multiple related tasks, such as item recommendation and CTR prediction, multi-task models can leverage shared information and improve recommendation accuracy.
+
+We are motivated to explore multi-task learning for recommendation systems using the Tenrec dataset to enhance the effectiveness of recommendation algorithms. This will provide users with more personalized and accurate recommendations, leading to increased user engagement, conversion rates, and customer satisfaction. Moreover, our investigation and implementation of multi-task learning techniques will contribute to the research community and industry practitioners, driving further advancements in the field of recommender systems.
+
+**User Groups Benefitting from the Outcome:**  
+1. Online Platform Providers: E-commerce websites and streaming services can benefit from improved recommendation accuracy and CTR prediction, leading to increased user engagement and satisfaction.
+2. Users: Online platform users will receive more personalized and relevant recommendations aligned with their preferences and needs.
+3. Researchers and Practitioners: Our project's findings and insights will advance the understanding of multi-task learning techniques in recommendation systems, serving as a benchmark for evaluating different approaches and driving further research and development in the field.
+
+## Related Work
+
+In our exploration of multi-task learning for recommendation systems, we found the following related work:
+
+1. **Collaborative Filtering for Implicit Feedback Datasets**  
+   - Paper by Hu, Yifan, et al.
+   - Description: Proposes a collaborative filtering approach for implicit feedback datasets, demonstrating its effectiveness on the Amazon Product Reviews dataset.
+
+2. **Factorization Machines**  
+   - Paper by Rendle, Steffen.
+   - Description: Introduces factorization machines, a generic model for predicting user-item preferences in recommender systems, with evaluations on the MovieLens dataset.
+
+3. **Session-based Recommendations with Recurrent Neural Networks**  
+   - Paper by Hidasi, Balazs, et al.
+   - Description: Proposes a session-based recommendation model based on recurrent neural networks (RNNs), achieving state-of-the-art performance on the Last.fm dataset.
+
+4. **Deep Neural Networks for YouTube Recommendations**  
+   - Paper by Covington, Paul, et al.
+   - Description: Presents a deep learning architecture for personalized video recommendations on YouTube, showing the effectiveness of deep neural networks in improving user engagement.
+
+## Basic Data Exploration
+
+The Tenrec dataset, curated by Tencent AI Lab, contains data from two real-world recommendation platforms: a news feed platform and a video feed platform. It comprises around 5 million users and 140 million interactions and includes user IDs, item IDs, interaction types, timestamps, user features, and item features. The dataset is a valuable resource for training and evaluating new recommender systems and comparing different models' performance.
+
+## Experiment Design and Work Distribution
+
+To achieve our goals, we have designed a systematic approach to address the multi-task learning for recommendation systems. Each team member will focus on a specific aspect:
+
+1. **Data Exploration and Preprocessing (Member 1)**: This member will analyze the Tenrec dataset, handle missing values, and preprocess the data for further analysis.
+
+2. **Algorithm Selection (All Members)**: Each member will review and select an algorithm from the leaderboard. Member 2 will explore the LightGCN algorithm, Member 3 will investigate NGCF, and Member 4 will focus on ESMM.
+
+3. **Model Implementation and Training (Members 2, 3, and 4)**: Each member will implement their selected algorithm and train it on the Tenrec dataset, optimizing for recommendation accuracy and CTR prediction.
+
+4. **Model Evaluation and Comparison (All Members)**: Each member will evaluate their implemented model using metrics like precision, recall, and AUC-ROC. Comparisons will be made against baseline models and other team members' models.
+
+5. **Integration and Ensemble (
+
+Member 1)**: The team will integrate individual models into a unified ensemble model that leverages the strengths of each algorithm to improve overall recommendation performance.
+
+Throughout the project, regular meetings and discussions will facilitate collaboration, knowledge sharing, and addressing challenges collectively.
+
+## References
+
+[1] P. Covington, J. Adams, and E. Sargin. Deep neural networks for YouTube recommendations. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining, 2016.
+
+[2] B. Hidasi, A. Karatzoglou, L. Baltrunas, and D. Tikk. Session-based recommendations with recurrent neural networks. arXiv preprint arXiv:1511.06939, 2015.
+
+[3] Y. Hu, Y. Koren, and C. Volinsky. Collaborative filtering for implicit feedback datasets. In 2008 Eighth IEEE International Conference on Data Mining, 2008.
+
+[4] S. Rendle. Factorization machines. In 2010 IEEE International Conference on Data Mining, 2010.
+
+---
 
 
-### Motivation and Problem Statement
-
-Our project focuses on "Multi-task Learning for Recommendation" using the Tenrec dataset. The goal is to create a model that can perform multiple recommendation tasks simultaneously, such as item recommendation and click-through rate (CTR) prediction. By jointly optimizing these tasks, our aim is to improve the accuracy and performance of recommendation systems compared to single-task models.
-
-### Background and Objectives
-
-Recommender systems play a crucial role in enhancing user experience on online platforms by providing personalized recommendations. Multi-task learning has emerged as a promising approach for recommendation systems, enabling models to leverage shared information between tasks and improve accuracy.
-
-We chose to investigate multi-task learning for recommendation systems using the Tenrec dataset to enhance the effectiveness of recommendation algorithms. By incorporating multiple tasks into a single model, we aim to capture complex user-item interactions and preferences, leading to more accurate and personalized recommendations.
-
-Our objectives are to:
-1. Explore and implement state-of-the-art models for multi-task learning in recommendation systems.
-2. Evaluate and compare the performance of these models on the Tenrec dataset.
-3. Contribute to the research community by providing insights into multi-task learning for recommender systems.
-
-### Related Work
-
-We have reviewed several relevant papers, including:
-1. "Collaborative Filtering for Implicit Feedback Datasets" by Hu et al.
-2. "Factorization Machines" by Rendle.
-3. "Session-based Recommendations with Recurrent Neural Networks" by Hidasi et al.
-4. "Deep Neural Networks for YouTube Recommendations" by Covington et al.
-
-### Basic Data Exploration
-
-The Tenrec dataset consists of around 5 million users and 140 million interactions from two real-world recommendation platforms. It includes user-item interaction data, user features (e.g., age, gender), item features (e.g., title, category), and interaction types (e.g., click, like, share).
-
-The dataset is divided into training, validation, and test sets, along with a features file containing user and item features. We will use this dataset to train, evaluate, and compare different recommender systems.
-
-### Experiment Design and Work Distribution
-
-To achieve our goals, we have outlined a systematic approach:
-
-1. Data Exploration and Preprocessing: Member 1 will analyze and preprocess the Tenrec dataset.
-2. Algorithm Selection: Each member will choose a model from the leaderboard. Member 2 will explore LightGCN, Member 3 will investigate NGCF, and Member 4 will consider ESMM.
-3. Model Implementation and Training: Based on their selections, each member will implement and train their model on the Tenrec dataset.
-4. Model Evaluation and Comparison: Each member will evaluate their model using precision, recall, and AUC-ROC metrics and compare them against baseline models and other team members' models.
-5. Integration and Ensemble: The team will integrate individual models into a unified ensemble model, leveraging the strengths of each algorithm to enhance recommendation performance.
-
-Throughout the project, close collaboration, regular meetings, and knowledge sharing will ensure comprehensive understanding and successful implementation.
-
-### Team Members
-
-1. Ahmed Moussa - Model Implementation and Training
-2. Adel Abdelfatah - Algorithm Selection (LightGCN)
-3. Ali Aboelela - Algorithm Selection (NGCF)
-4. AbdAllah Ibrahim - Algorithm Selection (ESMM)
-
-### References
-
-[1] P. Covington, J. Adams, and E. Sargin. Deep Neural Networks for YouTube Recommendations. In Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, 2016.
-
-[2] B. Hidasi, A. Karatzoglou, L. Baltrunas, and D. Tikk. Session-based Recommendations with Recurrent Neural Networks. arXiv preprint arXiv:1511.06939, 2015.
-
-[3] Y. Hu, Y. Koren, and C. Volinsky. Collaborative Filtering for Implicit Feedback Datasets. In 2008 Eighth IEEE International Conference on Data Mining, 2008.
-
-[4] S. Rendle. Factorization Machines. In 2010 IEEE International Conference on Data Mining, 2010.
+**The Leader: Ahmed Moussa 20398549**  
+**Member 2: Adel Abdelfatah 20398047**  
+**Member 3: Ali Aboelela 20398556**  
+**Member 4: AbdAllah Ibrahim 20398554**
