@@ -71,6 +71,20 @@ Member 1)**: The team will integrate individual models into a unified ensemble m
 
 Throughout the project, regular meetings and discussions will facilitate collaboration, knowledge sharing, and addressing challenges collectively.
 
+## Experiment Results
+After extensive experimentation, we obtained the following results for our models:
+
+LightGCN Model:
+
+Test Loss: 1.2731
+NGCF Model:
+
+Test Loss: [To be updated]
+ESMM Model:
+
+Click Accuracy: 0.604858
+Like Accuracy: 0.718606
+
 ## References
 
 [1] P. Covington, J. Adams, and E. Sargin. Deep neural networks for YouTube recommendations. In Proceedings of the 22nd ACM SIGKDD international conference on Knowledge discovery and data mining, 2016.
